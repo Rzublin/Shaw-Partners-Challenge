@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Processo Seletivo Shaw and Partners / Junior Dev - Teste 1 - Raphael Zublin</title>
+</head>
+<body>
+  <div id="app">
+    <p id="palindromeP"></p>
+    <input id="palindromeInput" type="text" >
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+  </div>
+  <script>
+  function checkPalindrome (){
+    var palindrome = document.getElementById("palindromeInput").value;
+    var check="";
+    console.log(palindrome);
+    for (i=1;i<palindrome.length+1;i++){
+      check += palindrome.charAt(palindrome.length-i);
+    }
+    console.log(check);
+    if (check.toUpperCase() === palindrome.toUpperCase()) {
+      document.getElementById("palindromeP").innerHTML = "The word "+palindrome+" is a Palindrome.";
+    } else {
+      document.getElementById("palindromeP").innerHTML = "The word "+palindrome+" isn't a Palindrome.";
+    }
+
+  }
+  </script>
+</body>
+</html>
